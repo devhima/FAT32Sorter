@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:gravity="fill"
+	android:orientation="vertical">
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:text="FAT32 File Sorter"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_width="wrap_content"
+		android:textAlignment="center"
+		android:gravity="fill"
+		android:padding="10dp"
+		android:layout_gravity="center"
+		android:textColor="#4CA637"
+		android:textSize="32sp"
+		android:textStyle="bold"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:text="by DevHima."
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_width="wrap_content"
+		android:gravity="fill"
+		android:layout_gravity="right"
+		android:padding="0dp"
+		android:paddingRight="33dp"
+		android:textColor="#2B67D3"
+		android:textSize="25sp"
+		android:textStyle="italic"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:text="Backup files in:"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		android:layout_width="wrap_content"
+		android:gravity="top|left"
+		android:layout_gravity="top|left"
+		android:layout_margin="10dp"
+		android:layout_marginLeft="0dp"
+		android:padding="10dp"/>
+
+	<RadioGroup
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:orientation="horizontal"
+		android:id="@+id/radioMemory"
+		android:baselineAlignedChildIndex="0"
+		android:baselineAligned="true">
+
+		<RadioButton
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:id="@+id/r_inmem"
+			android:text="Mobile."/>
+
+		<RadioButton
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:id="@+id/r_sdcard"
+			android:text="SD-Card."/>
+
+	</RadioGroup>
+
+	<Button
+		android:layout_height="wrap_content"
+		android:text="Start sorting"
+		android:layout_width="wrap_content"
+		android:padding="11dp"
+		android:layout_margin="15dp"
+		android:gravity="fill"
+		android:layout_gravity="right"
+		android:id="@+id/btnStart"/>
+
+	<RelativeLayout
+		android:layout_height="match_parent"
+		android:layout_width="match_parent"
+		android:id="@+id/lay_load"
+		android:visibility="invisible">
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:text="Loading ..."
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:layout_width="match_parent"
+			android:layout_alignParentBottom="true"
+			android:gravity="center"
+			android:textColor="#FF0F00"
+			android:textAlignment="center"
+			android:id="@+id/mtv1"/>
+
+		<ProgressBar
+			android:layout_height="match_parent"
+			style="?android:attr/progressBarStyleLarge"
+			android:layout_width="match_parent"
+			android:layout_alignParentStart="false"
+			android:layout_above="@id/mtv1"
+			android:id="@+id/prg1"/>
+
+	</RelativeLayout>
+
+</LinearLayout>
+
